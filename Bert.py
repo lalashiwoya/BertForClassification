@@ -1,7 +1,7 @@
 import torch
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
-from transformers import BertForSequenceClassification, BertTokenizer, AdamW, AutoTokenizer
+from transformers import BertForSequenceClassification, AdamW, AutoTokenizer
 from sklearn import metrics
 import pandas as pd
 import numpy as np
