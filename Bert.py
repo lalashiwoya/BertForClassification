@@ -182,9 +182,9 @@ def evaluate(dataloader_val, model):
         targets = data['targets'].to(device, dtype=torch.long)
         with torch.no_grad():
             outputs = model(ids, mask, token_type_ids, labels=targets)
-    _, big_idx = torch.max(outputs[1].data, dim=1)
-    predictions.extend(big_idx.tolist())
-    gold_standard.extend(targets.tolist())
+        _, big_idx = torch.max(outputs[1].data, dim=1)
+        predictions.extend(big_idx.tolist())
+        gold_standard.extend(targets.tolist())
     return predictions, gold_standard
 
 # use macro F1 score to evaluate the performance of the model
